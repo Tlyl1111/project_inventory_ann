@@ -1,0 +1,13 @@
+<odoo>
+    <record id="cron_forecast_inventory" model="ir.cron">
+        <field name="name">Dự đoán tồn kho ANN</field>
+        <field name="model_id" ref="product.model_product_product"/>
+        <field name="state">code</field>
+        <field name="code">model.update_inventory_forecast()</field>
+        <field name="interval_number">7</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="doall">False</field>
+        <field name="active">True</field>
+    </record>
+</odoo>

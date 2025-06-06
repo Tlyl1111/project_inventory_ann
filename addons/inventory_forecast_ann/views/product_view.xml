@@ -1,0 +1,12 @@
+<odoo>
+    <record id="view_product_form_forecast" model="ir.ui.view">
+        <field name="name">product.form.forecast</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='qty_available']" position="after">
+                <field name="predicted_qty_next_week" readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
