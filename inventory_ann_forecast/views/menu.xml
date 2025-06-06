@@ -1,0 +1,14 @@
+<odoo>
+    <menuitem id="menu_ann_forecast_root" name="ANN Forecast" sequence="10"/>
+
+    <menuitem id="menu_ann_forecast"
+              name="Dự báo tồn kho"
+              parent="menu_ann_forecast_root"
+              action="action_stock_ann_forecast"/>
+
+    <record id="action_stock_ann_forecast" model="ir.actions.act_window">
+        <field name="name">Dự báo tồn kho</field>
+        <field name="res_model">stock.ann.forecast</field>
+        <field name="view_mode">graph</field>
+    </record>
+</odoo>
